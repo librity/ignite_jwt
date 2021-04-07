@@ -9,6 +9,7 @@ defmodule RepoWeb.Router do
     pipe_through :api
 
     resources "/users", UsersController, only: [:create]
+    post "/users/sign_in", UsersController, :sign_in
 
     get "/repos/:username", ReposController, :show
   end

@@ -20,6 +20,15 @@ config :repo, RepoWeb.Endpoint,
 
 config :repo, RepoWeb.ReposController, github_adapter: Github.Client
 
+# Custom
+config :repo, RepoWeb.Auth.Guardian,
+  issuer: "repo",
+  secret_key: "8N/uPUUWbFku4F5dWG1gnx0TvjW/3K6KVqvMzYIJxg7INrzXg+GafK2biOl7nTin"
+
+config :repo, RepoWeb.Auth.Pipeline,
+  module: RepoWeb.Auth.Guardian,
+  error_handler: RepoWeb.Auth.ErrorHandler
+
 # Configures Elixir's Logger
 config :logger, :console,
   format: "$time $metadata[$level] $message\n",
