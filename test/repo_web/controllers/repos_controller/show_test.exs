@@ -6,8 +6,18 @@ defmodule RepoWeb.ReposController.CreateTest do
 
   alias Github.ClientMock
   alias Repo.Error
+  alias RepoWeb.Auth.Guardian
 
   describe "create/2" do
+    setup %{conn: conn} do
+      user = insert(:user)
+      {:ok, token, _claims} = Guardian.encode_and_sign(user)
+
+      conn = put_req_header(conn, "authorization", "Bearer #{token}")
+
+      {:ok, conn: conn, user: user}
+    end
+
     test "returns user's repos if user exists", %{conn: conn} do
       username = "librity"
 

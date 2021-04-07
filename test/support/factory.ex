@@ -2,6 +2,11 @@ defmodule Repo.Factory do
   use ExMachina.Ecto, repo: Repo.Repo
 
   alias Github.RepoInfo
+  alias Repo.User
+
+  def user_factory do
+    %User{password: "first_rule"}
+  end
 
   def repo_info_factory do
     %RepoInfo{
