@@ -1,4 +1,4 @@
-# Rocket Seat Ignite - Repo
+# Rocket Seat Ignite - JWT Authentication
 
 ## Table of Contents
 
@@ -13,13 +13,18 @@
 
 ## About <a name = "about"></a>
 
-A repo fetcher backend made with Phoenix and Tesla.
+An authenticated API made with Phoenix and Guardian.
 
 ## Endpoints <a name = "endpoints"></a>
 
 Built-in:
 
 - `GET` http://localhost:4000/dashboard
+
+`Users`
+
+- `POST` http://localhost:4000/api/users
+- `POST` http://localhost:4000/api/users/sign_in
 
 `Repos`
 
