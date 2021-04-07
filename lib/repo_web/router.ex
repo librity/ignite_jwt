@@ -8,6 +8,8 @@ defmodule RepoWeb.Router do
   scope "/api", RepoWeb do
     pipe_through :api
 
+    resources "/users", UsersController, only: [:create]
+
     get "/repos/:username", ReposController, :show
   end
 
