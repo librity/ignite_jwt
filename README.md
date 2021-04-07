@@ -84,6 +84,8 @@ Github client:
 - https://github.com/PSPDFKit-labs/bypass
 - https://github.com/dashbitco/mox
 - https://github.com/thoughtbot/ex_machina
+- https://github.com/riverrun/pbkdf2_elixir
+- https://github.com/ueberauth/guardian
 
 ## Docs <a name = "docs"></a>
 

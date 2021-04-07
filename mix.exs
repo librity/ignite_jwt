@@ -43,10 +43,16 @@ defmodule Repo.MixProject do
       {:gettext, "~> 0.11"},
       {:jason, "~> 1.0"},
       {:plug_cowboy, "~> 2.0"},
-      {:credo, "~> 1.5", only: [:dev, :test], runtime: false},
       {:ex_machina, "~> 2.7.0"},
       {:tesla, "~> 1.4.0"},
       {:hackney, "~> 1.17.0"},
+      {:pbkdf2_elixir, "~> 1.3"},
+      {:guardian, "~> 2.0"},
+
+      # DEV TEST
+      {:credo, "~> 1.5", only: [:dev, :test], runtime: false},
+
+      # TEST
       {:bypass, "~> 2.1", only: :test},
       {:mox, "~> 1.0", only: :test}
     ]
